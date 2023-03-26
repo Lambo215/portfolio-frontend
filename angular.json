@@ -70,7 +70,8 @@
 
           "configurations": {
             "production": {
-              "browserTarget": "Proyecto-Integrador-Final:build:production"
+              "browserTarget": "Proyecto-Integrador-Final:build:production",
+              "proxyConfig": "src/proxy.conf.json"
             },
             "development": {
               "browserTarget": "Proyecto-Integrador-Final:build:development"
