@@ -1,0 +1,8 @@
+section > div {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  gap: 20px;
+  place-content: center;
+}

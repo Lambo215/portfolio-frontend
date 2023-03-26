@@ -1,0 +1,17 @@
+.container-home {
+  background-image: url("../../assets/img/banner.jpeg");
+  background-size: cover;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.home-text {
+  color: white;
+  width: 35%;
+  height: 35%;
+  font-weight: bolder;
+}
+
+img {
+  margin-top: 15vh;
+}

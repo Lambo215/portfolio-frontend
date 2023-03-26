@@ -1,0 +1,78 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Martín Espejo</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#aboutme"
+            >Acerca de mi</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#experience"
+            >Experiencia</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#education"
+            >Educacion</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#skills"
+            >Hard & Soft Skills</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#proyects"
+            >Proyectos</a
+          >
+        </li>
+      </ul>
+      <form class="d-flex">
+        <section class="buttons">
+          <a
+            target="_blank"
+            href="https://github.com/Lambo215"
+            class="bi bi-github"
+            >Github</a
+          >
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/martin-espejo-62b594241/"
+            class="bi bi-linkedin"
+            >Linkedin</a
+          >
+          <a
+            class="btn btn-dark"
+            id="login"
+            routerLink="login"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            *ngIf="!authService.isLoggedIn"
+            >Login</a
+          >
+          <button
+            class="btn btn-dark"
+            ariaCurrentWhenActive="page"
+            (click)="authService.doLogout()"
+            *ngIf="authService.isLoggedIn"
+          >
+            Logout
+          </button>
+        </section>
+      </form>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,17 @@
+<section class="container" id="proyects">
+  <h3>Proyectos</h3>
+  <div>
+    <div *ngFor="let proyect of this.proyectsList">
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">{{ proyect.nombreProyecto }}</h5>
+          <p class="card-text">
+            {{ proyect.fechaInicio }} - {{ proyect.fechaFin }}
+          </p>
+          <p class="card-text">{{ proyect.descripcion }}</p>
+        </div>
+      </div>
+      <div class="card-body"></div>
+    </div>
+  </div>
+</section>

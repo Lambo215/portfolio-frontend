@@ -1,0 +1,21 @@
+<main>
+  {{ this.person?.nombre }}
+  <app-hero></app-hero>
+  <app-aboutme *ngIf="this.person" [person]="this.person"></app-aboutme>
+  <app-experience
+    *ngIf="this.person"
+    [laboralExperienceList]="this.person.laboralExperienceList"
+  ></app-experience>
+  <app-education
+    *ngIf="this.person"
+    [educationList]="this.person.educationList"
+  ></app-education>
+  <app-proyects
+    *ngIf="this.person"
+    [proyectsList]="this.person.proyectsList"
+  ></app-proyects>
+  <app-skills
+    *ngIf="this.person"
+    [skillsList]="this.person.skillsList"
+  ></app-skills>
+</main>

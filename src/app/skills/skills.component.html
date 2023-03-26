@@ -1,0 +1,16 @@
+<section class="container" id="Skills">
+  <h3>Hard & Soft Skills</h3>
+  <div *ngFor="let skill of this.skillsList">
+    <h4>{{ skill.nombreSkill }}</h4>
+    <div class="progress">
+      <div
+        class="progress-bar"
+        role="progressbar"
+        [style.width]="skill.valor + '%'"
+        [attr.aria-valuenow]="skill.valor"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      ></div>
+    </div>
+  </div>
+</section>

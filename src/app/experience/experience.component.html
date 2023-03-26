@@ -1,0 +1,24 @@
+<section class="container" id="experience">
+  <h3>Experiencia</h3>
+  <div>
+    <div *ngFor="let experience of this.laboralExperienceList">
+      <button
+        class="btn btn-dark"
+        ariaCurrentWhenActive="page"
+        *ngIf="authService.isLoggedIn"
+      >
+        agregar nuevo
+      </button>
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">{{ experience.nombreEmpresa }}</h5>
+          <p class="card-text">
+            {{ experience.fechaInicio }} - {{ experience.fechaFin }}
+          </p>
+          <p class="card-text">{{ experience.descripcion }}</p>
+        </div>
+      </div>
+      <div class="card-body"></div>
+    </div>
+  </div>
+</section>
