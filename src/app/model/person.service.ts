@@ -17,7 +17,7 @@ export class PersonService {
 
   getPerson(): Observable<Person> {
     return this.http
-      .get<Person>('/api/person/1')
+      .get<Person>('https://portfolio-backend-mz2x.onrender.com/api/person/1')
       .pipe(retry(1), catchError(this.errorHandl));
   }
 
