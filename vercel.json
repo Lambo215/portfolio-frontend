@@ -14,5 +14,12 @@
         }
       ]
     }
+  ],
+
+  "rewrites": [
+    {
+      "source": "/api/:match",
+      "destination": "https://portfolio-backend-mz2x.onrender.com/api/:match"
+    }
   ]
 }
