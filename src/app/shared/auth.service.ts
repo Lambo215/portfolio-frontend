@@ -16,7 +16,7 @@ export class AuthService {
   currentUser = {};
   constructor(private http: HttpClient, public router: Router) {}
   signIn(user: User) {
-    return this.http.post<any>('/api/login', user).subscribe((res: any) => {
+    return this.http.post<any>('https://portfolio-backend-mz2x.onrender.com/api/login', user).subscribe((res: any) => {
       localStorage.setItem('access_token', res.token);
       this.router.navigate(['/']);
     });
