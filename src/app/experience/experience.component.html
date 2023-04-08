@@ -3,11 +3,18 @@
   <div>
     <div *ngFor="let experience of this.laboralExperienceList">
       <button
-        class="btn btn-dark"
+        class="btn btn-outline-primary"
         ariaCurrentWhenActive="page"
         *ngIf="authService.isLoggedIn"
       >
-        agregar nuevo
+        Editar
+      </button>
+      <button
+        class="btn btn-outline-danger"
+        ariaCurrentWhenActive="page"
+        *ngIf="authService.isLoggedIn"
+      >
+        Borrar
       </button>
       <div class="card" style="width: 18rem">
         <div class="card-body">

@@ -1,6 +1,20 @@
 <section class="container" id="Skills">
   <h3>Hard & Soft Skills</h3>
   <div *ngFor="let skill of this.skillsList">
+    <button
+        class="btn btn-outline-primary"
+        ariaCurrentWhenActive="page"
+        *ngIf="authService.isLoggedIn"
+      >
+        Editar
+      </button>
+      <button
+        class="btn btn-outline-danger"
+        ariaCurrentWhenActive="page"
+        *ngIf="authService.isLoggedIn"
+      >
+        Borrar
+      </button>
     <h4>{{ skill.nombreSkill }}</h4>
     <div class="progress">
       <div

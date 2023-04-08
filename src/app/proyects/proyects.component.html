@@ -2,6 +2,20 @@
   <h3>Proyectos</h3>
   <div>
     <div *ngFor="let proyect of this.proyectsList">
+      <button
+        class="btn btn-outline-primary"
+        ariaCurrentWhenActive="page"
+        *ngIf="authService.isLoggedIn"
+      >
+        Editar
+      </button>
+      <button
+        class="btn btn-outline-danger"
+        ariaCurrentWhenActive="page"
+        *ngIf="authService.isLoggedIn"
+      >
+        Borrar
+      </button>
       <div class="card" style="width: 18rem">
         <div class="card-body">
           <h5 class="card-title">{{ proyect.nombreProyecto }}</h5>

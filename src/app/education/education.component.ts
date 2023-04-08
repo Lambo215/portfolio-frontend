@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Education } from '../model/education';
+import { AuthService } from '../shared/auth.service';
 
 @Component({
   selector: 'app-education',
@@ -8,7 +9,7 @@ import { Education } from '../model/education';
 })
 export class EducationComponent implements OnInit {
   @Input() educationList!: Array<Education>;
-  constructor() {}
+  constructor(public authService: AuthService) {}
 
   ngOnInit(): void {}
 }
